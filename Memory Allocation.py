@@ -2,7 +2,7 @@ import sys
 
 
 def first_fit(holes,m,processes,n):
-    allocation = [0] *n
+    allocation = [-1] *n
     # print(allocation)
     for i in range(n):
         for j in range(m):
@@ -14,7 +14,7 @@ def first_fit(holes,m,processes,n):
     for i in range(n):
         print(" ", "P"+str(i+1), "         ", processes[i],
               "         ", end=" ")
-        if allocation[i] != 0:
+        if allocation[i] != -1:
             print(allocation[i]+1)
         else:
             print("Not Allocated")
@@ -22,9 +22,8 @@ def first_fit(holes,m,processes,n):
 
 
 
-
 def best_fit(holes,m,processes,n):
-    allocation = [0] * n
+    allocation = [-1] * n
     for i in range(n):
         index = -1
         for j in range(m):
@@ -40,7 +39,7 @@ def best_fit(holes,m,processes,n):
     for i in range(n):
         print(" ", "P" + str(i + 1), "         ", processes[i],
               "         ", end=" ")
-        if allocation[i] != 0:
+        if allocation[i] != -1:
             print(allocation[i] + 1)
         else:
             print("Not Allocated")
