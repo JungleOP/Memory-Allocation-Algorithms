@@ -109,7 +109,7 @@ def readInput():
     elif Alg == 3:
         AlgName = "Worst Fit"
     else:
-        print("Unregnizable  Algorithm")
+        print("unrecognizable  Algorithm")
         sys.exit(0)
     print("Algorithm:", AlgName)
     processes = []
