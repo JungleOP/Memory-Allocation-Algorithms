@@ -1,6 +1,5 @@
 import sys
 
-
 def first_fit(holes,m,processes,n):
     allocation = [-1] *n
     # print(allocation)
@@ -19,8 +18,6 @@ def first_fit(holes,m,processes,n):
         else:
             print("Not Allocated")
     # print(allocation) to know which block it was allocated to
-
-
 
 def best_fit(holes,m,processes,n):
     allocation = [-1] * n
@@ -44,9 +41,6 @@ def best_fit(holes,m,processes,n):
         else:
             print("Not Allocated")
 
-
-
-
 def worst_fit(holes,m,processes,n):
     allocation = [0]*n
     for i in range(n):
@@ -69,17 +63,6 @@ def worst_fit(holes,m,processes,n):
         else:
             print("Not Allocated")
 
-
-
-
-
-
-
-
-
-
-
-
 def Option(Alg,holes,m,processes,n):
     print()
     if Alg == 1:
@@ -90,12 +73,7 @@ def Option(Alg,holes,m,processes,n):
         worst_fit(holes, m, processes, n)
     else:
         sys.exit("Invalid algorithm!")
-
-
-
-
-
-
+        
 def readInput():
     print("  1:First Fit")
     print("  2:Best Fit")
